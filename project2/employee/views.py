@@ -8,6 +8,8 @@ class IndexView(generic.ListView):
   # 勝手に読み込まれる
   # template_name = 'employee/employee_list.html'
 
+  paginate_by = 2
+
   def get_context_data(self):
     # オーバーライドしなければテンプレートに渡す辞書の作成
     context = super().get_context_data() # 元の処理
